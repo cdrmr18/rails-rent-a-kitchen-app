@@ -1,2 +1,9 @@
 <h1>Listings#edit</h1>
-<p>Find me in app/views/listings/edit.html.erb</p>
+<%= simple_form_for [ @listing ] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :city %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.submit "Add listing", class: "btn btn-primary" %>
+<% end %>

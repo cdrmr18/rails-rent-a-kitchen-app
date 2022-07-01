@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @booking = Booking.where("user = ? OR owner_id = ?", current_user, current_user.id)
+    @review = Review.new
   end
 
   def create

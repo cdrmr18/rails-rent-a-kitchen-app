@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   resources :listings do
     # POST   /listings/:listing_id/bookings
     resources :bookings, only: [:create]
-     # POST   /listings/:listing_id/review
-    resources :reviews, only: [:create]
   end
 
   # /bookings --  /bookings/:id
-  resources :bookings, only: [:index, :show, :destroy]
-  resources :reviews, only: [:destroy]
+  resources :bookings, only: [:index, :show, :destroy] do
+    # POST   bookings/:booking_id/review
+    resources :reviews, only: [:create]
+  end
 end

@@ -1,2 +1,7 @@
 <h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
+<h2>Create a review </h2>
+<%= simple_form_for [ @booking, @review ] do |f| %>
+  <%= f.input :rating %>
+  <%= f.input :comment %>
+  <%= f.submit "Leave review", class: "btn btn-primary" %>
+<% end %>

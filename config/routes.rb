@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # /listing/:id -- listings/new
+  resources :listings do
+    # POST   /listings/:listing_id/bookings
+    resources :bookings, only: [:create]
+  end
+
+  # /bookings
+  resources :bookings, only: [:index, :show, :destroy]
 end

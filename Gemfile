@@ -26,6 +26,7 @@ gem 'devise'
 # gem 'image_processing', '~> 1.2'
 gem 'pundit'
 gem 'pg_search', '~> 2.3.0'
+gem "geocoder"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 

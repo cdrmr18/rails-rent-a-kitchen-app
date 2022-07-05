@@ -3,7 +3,11 @@ class ListingsController < ApplicationController
   skip_before_action :authenticate_user!, except: [:new, :edit, :destroy]
 
   def index
-    @listings = policy_scope(Listing)
+    if params[:query].present?
+      @listings = policy_scope(Listing).search_by_city(params[:query])
+    else
+      @listings = policy_scope(Listing)
+    end
   end
 
   def show

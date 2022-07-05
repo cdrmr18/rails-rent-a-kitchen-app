@@ -1,2 +1,9 @@
-<h1>Listings#index</h1>
-<p>Find me in app/views/listings/index.html.erb</p>
+<div class='search-icons'>
+  icons
+</div>
+
+<div class='home-images'>
+<% @listings.each do |listing| %>
+  <%= listing.city %>
+<% end %>
+</div>

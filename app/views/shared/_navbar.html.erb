@@ -1,7 +1,16 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <% end %>
+
+    <%= form_tag listings_path, method: :get, class: 'd-flex w-50' do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control rounded-pill ps-3 shadow-sm",
+        placeholder: "Search listings"
+      %>
+      <%= submit_tag "🔍", class: "btn ms-1 rounded-pill" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,6 +25,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Bookings", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
           <% if current_user.photo.key? %>

@@ -2,8 +2,51 @@
   icons
 </div>
 
-<div class='home-images'>
-<% @listings.each do |listing| %>
-  <%= listing.city %>
-<% end %>
+<div class="container">
+  <div class='home-images'>
+    <div class="image">
+      <% @listings.each do |listing| %>
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><%= listing.city %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="image">
+      <% @listings.each do |listing| %>
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><%= listing.city %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+     <div class="image">
+      <% @listings.each do |listing| %>
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><%= listing.city %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+     <div class="image">
+      <% @listings.each do |listing| %>
+        <div class="card" style="width: 18rem;">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1773&q=80" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text"><%= listing.city %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
 </div>

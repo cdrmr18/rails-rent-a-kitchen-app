@@ -1,0 +1,17 @@
+.home-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 4px;
+}
+
+@media (max-width: 992px) {
+  .home-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-images {
+    grid-template-columns: 1fr;
+  }
+}

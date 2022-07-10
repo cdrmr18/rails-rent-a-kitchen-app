@@ -12,4 +12,8 @@ Rails.application.routes.draw do
     # POST   bookings/:booking_id/review
     resources :reviews, only: [:create]
   end
+
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
